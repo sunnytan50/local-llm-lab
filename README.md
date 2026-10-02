@@ -49,7 +49,7 @@ Reading the prompt (prefill) is where the machines differ most: about 9,081 tok/
 | `bench/long-context-256k/` | A 256k-context tool-calling and reasoning bench: a ~200k-token dossier with planted needles, bugs to find and a decoy, a grader, and 17 deterministic tests that never call a model |
 | `results/` | Raw JSON from the runs above |
 
-Model and profile names in the configs and results are neutral labels for the community 4-bit builds I tested. The launch scripts are otherwise exactly what I ran. Paths such as `/opt/llm/models/hot/...` and `/opt/llm/venvs/...` are my layout, so change them to yours. The servers bind to `127.0.0.1` only.
+Model and profile names in the configs and results are neutral labels for the community 4-bit builds I tested. The launch scripts are my current versions (last changed 1 Oct 2026); some flags were tuned after the 22 Aug runs in the results table. Paths such as `/opt/llm/models/hot/...` and `/opt/llm/venvs/...` are my layout, so change them to yours. The servers bind to `127.0.0.1` only.
 
 ## Running the benchmarks
 
