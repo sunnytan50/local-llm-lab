@@ -1,0 +1,261 @@
+{
+  "profile": "mtp",
+  "context": 32768,
+  "label": "regular Qwen native MTP candidate",
+  "started_at": "20260822T092505Z",
+  "apply": {
+    "status": "done",
+    "phases": [
+      {
+        "at": 0.0,
+        "phase": "queued",
+        "detail": "Waiting for the workstation controller"
+      },
+      {
+        "at": 3.0,
+        "phase": "loading",
+        "detail": "Model server process started; loading weights"
+      },
+      {
+        "at": 128.9,
+        "phase": "ready",
+        "detail": "Ready and completion-verified."
+      }
+    ],
+    "elapsed_seconds": 128.9,
+    "result": {
+      "applied": true,
+      "controller": {
+        "running": true,
+        "pid": 104824,
+        "profile": "mtp",
+        "context": 32768
+      },
+      "model": {
+        "id": "qwen38-nvfp4",
+        "object": "model",
+        "created": 1787390833,
+        "owned_by": "vllm",
+        "root": "/opt/llm/models/hot/Qwen3.8-27B-NVFP4-RTX5090",
+        "parent": null,
+        "max_model_len": 32768,
+        "permission": [
+          {
+            "id": "modelperm-a02d1c838f4a9f7a",
+            "object": "model_permission",
+            "created": 1787390833,
+            "allow_create_engine": false,
+            "allow_sampling": true,
+            "allow_logprobs": true,
+            "allow_search_indices": false,
+            "allow_view": true,
+            "allow_fine_tuning": false,
+            "organization": "*",
+            "group": null,
+            "is_blocking": false
+          }
+        ]
+      },
+      "completion_probe": "READY"
+    },
+    "error": null
+  },
+  "served_model": {
+    "id": "qwen38-nvfp4",
+    "object": "model",
+    "created": 1787390836,
+    "owned_by": "vllm",
+    "root": "/opt/llm/models/hot/Qwen3.8-27B-NVFP4-RTX5090",
+    "parent": null,
+    "max_model_len": 32768,
+    "permission": [
+      {
+        "id": "modelperm-9cd8dc2d2c18996d",
+        "object": "model_permission",
+        "created": 1787390836,
+        "allow_create_engine": false,
+        "allow_sampling": true,
+        "allow_logprobs": true,
+        "allow_search_indices": false,
+        "allow_view": true,
+        "allow_fine_tuning": false,
+        "organization": "*",
+        "group": null,
+        "is_blocking": false
+      }
+    ]
+  },
+  "runtime": {
+    "profile": "mtp",
+    "context": 32768,
+    "running": true,
+    "pid": 104824
+  },
+  "vram_after_load_mib": 30179.0,
+  "suite": {
+    "warmup": {
+      "ok": true,
+      "content": "READY",
+      "reasoning_chars": 0,
+      "tool_calls": [],
+      "finish_reason": "stop",
+      "prompt_tokens": 19,
+      "completion_tokens": 2,
+      "ttft_seconds": 0.178,
+      "elapsed_seconds": 0.213,
+      "tokens_per_second": 57.2
+    },
+    "short": {
+      "ok": true,
+      "content": "Sunlight contains all colors of the visible spectrum, but when it enters Earth's atmosphere, shorter wavelengths like blue and violet scatter more strongly than longer wavelengths due to a phenomenon called Rayleigh scattering. While violet light scatters even more than blue, our eyes are less sensitive to violet and some of it is absorbed by the upper atmosphere, making blue the dominant color we perceive. Consequently, this scattered blue light reaches our eyes from every direction in the sky, giving it its characteristic hue during clear days.",
+      "reasoning_chars": 0,
+      "tool_calls": [],
+      "finish_reason": "stop",
+      "prompt_tokens": 23,
+      "completion_tokens": 101,
+      "ttft_seconds": 0.143,
+      "elapsed_seconds": 0.917,
+      "tokens_per_second": 130.6
+    },
+    "generation": {
+      "ok": true,
+      "content": "The wind off the North Sea didn\u2019t just blow; it hammered against the granite walls of the lighthouse, a relentless percussion that had become Elias\u2019s heartbeat over his forty years in service. He was an old man now, his joints stiff as rusted hinges, and the isolation that once felt like a burden had settled into a strange, heavy comfort. The world below was a smear of grey clouds and churning whitecaps, separated from him by two hundred feet of solid rock and glass.\n\nIt was during one of these particularly violent storms that he found the book. Elias had been cleaning the base of the spiral staircase, a task he performed with mechanical precision despite having no reason to do so anymore. The new automated systems meant he rarely needed to climb up or down, yet the ritual kept his hands busy and his mind quiet. Beneath a loose stone near the foundation, half-buried in decades of salt dust and dampness, lay a leather-bound volume. It was not the official logbook, which sat neatly on the desk upstairs. This one was older, its spine cracked and frayed, the cover stained with what looked like dried blood or perhaps just dark tea stains.\n\nHe brought it back to his small quarters, the fire crackling in the hearth providing the only warmth in the drafty room. The air smelled of brine and old paper. As he opened the cover, the scent hit him\u2014a sharp, acrid tang of mildew mixed with something sweeter, like rotting fruit. The pages were brittle, yellowed at the edges, and covered in a handwriting that slanted aggressively to the right. It wasn\u2019t the neat, bureaucratic script of the modern keepers. This was frantic, messy, and deeply personal.\n\nElias traced the first entry with a trembling finger. The date was 1942. The ink was faded to a ghostly brown, but the words remained legible. *The light is not for them,* the entry read. *They think the beam guides ships away from the rocks. But I have seen what happens when the light hits the water at three in the morning. The shadows move. They don\u2019t obey the physics of refraction. They stretch. They pull.*\n\nA chill that had nothing to do with the November weather crawled up Elias\u2019s spine. He turned the page, expecting to find more poetic ramblings about loneliness or madness. Instead, he found sketches. Crude, charcoal drawings of figures standing in the surf. They were not sailors. They were tall, thin, and their limbs seemed too long for their bodies. In one drawing, a figure was reaching out toward the lighthouse, its mouth open in a silent scream. In another, the lighthouse itself was drawn with cracks running through the glass, bleeding light onto the beach where the figures gathered.\n\nThe entries grew darker as the months progressed. The keeper who wrote them spoke of a frequency, a hum that came from the generator room, low enough to feel in the teeth rather than hear with the ears. He claimed the hum called them. He claimed that if you looked directly into the beam during a full moon, you could see them waiting on the horizon, patient and hungry. There was a final entry, dated three days before the previous keeper, Thomas, had vanished without a trace in 1943. *I am leaving tonight. I will take the boat. I will not look back. If you are reading this, burn it. Do not let the light shine on the water after midnight. They are waking up.*\n\nElias closed the book. The storm outside intensified, the waves crashing against the cliff with a fury that shook the floorboards. He looked at the clock on the wall. It was 11:45 PM. The lighthouse beam swept across the darkness every twelve seconds, a rhythmic pulse of white light cutting through the blackness. For the first time in his life, Elias felt a genuine, primal fear. He remembered the stories Thomas had told him, the ones he had dismissed as drunken fantasies. He remembered the way Thomas used to stare out the window, his eyes wide and unblinking, staring at nothing.\n\nThe generator hummed in the distance, a low vibration that he had always ignored. Now, it sounded like a voice calling his name. Elias stood up, his knees popping, and walked to the heavy iron door that led to the lamp room. His hand hovered over the lever that controlled the shutter mechanism. The protocol said the light must never go out. Safety regulations demanded constant illumination. But the book had said otherwise. *Do not let the light shine on the water after midnight.*\n\nOutside, the rain lashed against the glass. Somewhere far below, in the churning black depths, he imagined shapes rising, breaking the surface with slow, deliberate movements. The beam swept around, illuminating the empty sea for a split second. Then darkness. Then light again. Each flash revealed a little more of the night",
+      "reasoning_chars": 0,
+      "tool_calls": [],
+      "finish_reason": "length",
+      "prompt_tokens": 41,
+      "completion_tokens": 1024,
+      "ttft_seconds": 0.142,
+      "elapsed_seconds": 10.298,
+      "tokens_per_second": 100.8
+    },
+    "thinking": {
+      "ok": true,
+      "content": "\n\nAnswer: 391",
+      "reasoning_chars": 124,
+      "tool_calls": [],
+      "finish_reason": "stop",
+      "prompt_tokens": 73,
+      "completion_tokens": 64,
+      "ttft_seconds": 0.135,
+      "elapsed_seconds": 0.544,
+      "tokens_per_second": 156.5,
+      "answer_correct": true
+    },
+    "long_context": {
+      "ok": true,
+      "content": "7741-ZEBRA",
+      "reasoning_chars": 0,
+      "tool_calls": [],
+      "finish_reason": "stop",
+      "prompt_tokens": 10553,
+      "completion_tokens": 8,
+      "ttft_seconds": 0.953,
+      "elapsed_seconds": 0.991,
+      "tokens_per_second": 213.2,
+      "recall_correct": true
+    },
+    "tool_call": {
+      "ok": true,
+      "content": "",
+      "reasoning_chars": 0,
+      "tool_calls": [
+        {
+          "name": "get_weather",
+          "arguments": "{\"city\": \"Dubai\"}"
+        }
+      ],
+      "finish_reason": "tool_calls",
+      "prompt_tokens": 235,
+      "completion_tokens": 27,
+      "ttft_seconds": 0.182,
+      "elapsed_seconds": 0.291,
+      "tokens_per_second": 248.2,
+      "structured_ok": true,
+      "parsed_arguments": {
+        "city": "Dubai"
+      }
+    },
+    "vision": {
+      "ok": true,
+      "content": "CODE: ZEBRA-7741",
+      "reasoning_chars": 0,
+      "tool_calls": [],
+      "finish_reason": "stop",
+      "prompt_tokens": 148,
+      "completion_tokens": 11,
+      "ttft_seconds": 0.242,
+      "elapsed_seconds": 0.306,
+      "tokens_per_second": 171.3,
+      "ocr_correct": true
+    },
+    "quality": {
+      "factual": {
+        "ok": true,
+        "content": "The capital of Australia is Canberra, which officially became the capital in 1913.",
+        "reasoning_chars": 0,
+        "tool_calls": [],
+        "finish_reason": "stop",
+        "prompt_tokens": 28,
+        "completion_tokens": 20,
+        "ttft_seconds": 0.135,
+        "elapsed_seconds": 0.241,
+        "tokens_per_second": 187.9
+      },
+      "coding": {
+        "ok": true,
+        "content": "```python\ndef is_palindrome(s):\n    cleaned = ''.join(ch.lower() for ch in s if ch.isalnum())\n    return cleaned == cleaned[::-1]\n```",
+        "reasoning_chars": 0,
+        "tool_calls": [],
+        "finish_reason": "stop",
+        "prompt_tokens": 38,
+        "completion_tokens": 39,
+        "ttft_seconds": 0.134,
+        "elapsed_seconds": 0.351,
+        "tokens_per_second": 179.4,
+        "has_fence": true
+      },
+      "format": {
+        "ok": true,
+        "content": "{\"city\":\"Tokyo\",\"population_millions\":37.4}",
+        "reasoning_chars": 0,
+        "tool_calls": [],
+        "finish_reason": "stop",
+        "prompt_tokens": 48,
+        "completion_tokens": 16,
+        "ttft_seconds": 0.134,
+        "elapsed_seconds": 0.239,
+        "tokens_per_second": 152.4,
+        "json_ok": true
+      }
+    },
+    "stability": {
+      "runs": 5,
+      "ok": 5,
+      "errors": [],
+      "tps_mean": 114.6,
+      "tps_stdev": 11.7,
+      "ttft_mean": 0.139,
+      "empty_outputs": 0
+    }
+  },
+  "vram_after_suite_mib": 30293.0,
+  "acceptance": {
+    "sglang_samples": 0,
+    "vllm_samples": 2,
+    "vllm_last": {
+      "fields": {
+        "Mean acceptance length": "2.38",
+        " Accepted throughput": "52.00",
+        " Drafted throughput": "112.79",
+        " Accepted": "520",
+        " Drafted": "1128",
+        "position acceptance rate": "0.673",
+        " Avg Draft acceptance rate": "46.1"
+      },
+      "per_position": null
+    },
+    "vllm_mean_acceptance_length": 2.29
+  },
+  "finished_at": "20260822T092734Z"
+}

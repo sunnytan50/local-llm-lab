@@ -1,0 +1,41 @@
+{
+  "generated_at": "2026-08-20T14:23:15.499542+00:00",
+  "tests": {
+    "authentication": {
+      "passed": true,
+      "unauthenticated_status": 401,
+      "authenticated_status": 200,
+      "target_listed": true
+    },
+    "structured_json": {
+      "passed": true,
+      "parsed": {
+        "status": "ok",
+        "count": 3
+      }
+    },
+    "tool_roundtrip": {
+      "passed": true,
+      "arguments": {
+        "a": 19,
+        "b": 23
+      },
+      "final_text": "TOOL_ROUNDTRIP_OK"
+    },
+    "streaming": {
+      "passed": true,
+      "output": "STREAM_OK",
+      "sse_events": 4
+    },
+    "cancellation": {
+      "passed": true,
+      "received_before_cancel": true,
+      "health_after_cancel": "healthy"
+    },
+    "post_cancel_completion": {
+      "passed": true,
+      "output": "TARGET_ONLY_OK"
+    }
+  },
+  "passed": true
+}

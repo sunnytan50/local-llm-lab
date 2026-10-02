@@ -1,0 +1,229 @@
+{
+  "profile": "dflash2",
+  "context": 32768,
+  "label": "matched DFlash2 comparison after sampling update",
+  "started_at": "20260822T093018Z",
+  "apply": {
+    "status": "done",
+    "phases": [
+      {
+        "at": 0.0,
+        "phase": "queued",
+        "detail": "Waiting for the workstation controller"
+      },
+      {
+        "at": 3.0,
+        "phase": "stopping",
+        "detail": "Asking the workstation controller to start the profile"
+      },
+      {
+        "at": 9.0,
+        "phase": "loading",
+        "detail": "Model server process started; loading weights"
+      },
+      {
+        "at": 33.1,
+        "phase": "verifying",
+        "detail": "Endpoint is up; running the completion probe"
+      },
+      {
+        "at": 33.2,
+        "phase": "ready",
+        "detail": "Ready and completion-verified."
+      }
+    ],
+    "elapsed_seconds": 33.2,
+    "result": {
+      "applied": true,
+      "controller": {
+        "running": true,
+        "pid": 107680,
+        "profile": "dflash2",
+        "context": 32768
+      },
+      "model": {
+        "id": "qwen38-nvfp4",
+        "object": "model",
+        "created": 1787391051,
+        "owned_by": "sglang",
+        "root": "qwen38-nvfp4",
+        "parent": null,
+        "max_model_len": 32768
+      },
+      "completion_probe": "READY"
+    },
+    "error": null
+  },
+  "served_model": {
+    "id": "qwen38-nvfp4",
+    "object": "model",
+    "created": 1787391055,
+    "owned_by": "sglang",
+    "root": "qwen38-nvfp4",
+    "parent": null,
+    "max_model_len": 32768
+  },
+  "runtime": {
+    "profile": "dflash2",
+    "context": 32768,
+    "running": true,
+    "pid": 107680
+  },
+  "vram_after_load_mib": 28528.0,
+  "suite": {
+    "warmup": {
+      "ok": true,
+      "content": "READY",
+      "reasoning_chars": 0,
+      "tool_calls": [],
+      "finish_reason": "stop",
+      "prompt_tokens": 19,
+      "completion_tokens": 2,
+      "ttft_seconds": 0.255,
+      "elapsed_seconds": 0.273,
+      "tokens_per_second": 116.1
+    },
+    "short": {
+      "ok": true,
+      "content": "Sunlight enters the atmosphere and interacts with gas molecules, causing shorter wavelengths of light to scatter more effectively than longer ones\u2014a phenomenon known as Rayleigh scattering. Because blue light has a shorter wavelength than red or orange light, it is scattered in all directions by the air molecules, filling the sky with this color. Consequently, when we look up, our eyes detect this scattered blue light coming from all parts of the sky rather than just the direct path of the sun.",
+      "reasoning_chars": 0,
+      "tool_calls": [],
+      "finish_reason": "stop",
+      "prompt_tokens": 23,
+      "completion_tokens": 94,
+      "ttft_seconds": 0.115,
+      "elapsed_seconds": 0.8,
+      "tokens_per_second": 137.1
+    },
+    "generation": {
+      "ok": true,
+      "content": "The fog rolled in thick as wool, swallowing the jagged rocks of Blackwood Point until only the lighthouse stood as a solitary needle piercing the gray void. Elias, the keeper, wiped the condensation from the glass with a rag that had long since lost its whiteness. He was a man who preferred the predictable rhythm of the waves to the unpredictability of people, which was why he had chosen this post, isolated and eternal.\n\nHe was cleaning the base of the spiral staircase when his foot caught on something heavy. It wasn\u2019t a rock or a piece of driftwood. It was a leather-bound book, swollen with decades of moisture, resting in the shadow of the stairs where no one had looked in years. Elias picked it up. The cover was cracked, the spine held together by a single, stubborn thread. The title page was water-damaged, the ink blurred into a brown smear, but he could still make out the name: *Journal of Thomas Hale, Keeper, 1942\u20131955*.\n\nElias had no idea who Thomas Hale was. The previous keeper, old Miller, had been here for thirty years and never mentioned a predecessor who stayed that long. Miller had spoken of the light as if it had always been there, unchanging and eternal, a fixed point in a chaotic world. But this book suggested otherwise. It suggested a history, a struggle, and perhaps, a lie.\n\nHe sat on the cold stone floor, the fog pressing against the windows like a living thing. He opened the book. The pages smelled of mildew and old salt. The handwriting was jagged, hurried, the pen pressing hard enough to tear the paper in places.\n\n*Day 40. The light is failing. Not the bulb, not the mechanism. The light itself. It flickers when I look away. It stays steady when I stare. I am losing my mind, or the light is gaining it.*\n\nElias frowned. He had noticed the flickering. He had always attributed it to a faulty lens or a power surge from the mainland grid. He had filed reports, ordered new parts, but the problem persisted. He had assumed it was a mechanical issue, something to be fixed with wrenches and oil.\n\nHe turned the pages. The entries grew darker. The ink bled into the paper as if the words were weeping.\n\n*Day 102. I saw her again. Standing on the rocks. She is not real. I know she is not real. But she waves. She waves and I feel a pull in my chest, a gravity that isn\u2019t mine. I must keep the light on. If I turn it off, she will come closer. If I keep it on, I will go mad.*\n\nElias felt a chill that had nothing to do with the damp air. He thought of the woman he sometimes saw in the fog, a figure in a yellow dress, standing on the promontory. He had told himself it was a trick of the light, a hallucination born of isolation. He had told Miller, and Miller had laughed, saying Elias needed a vacation, a change of scenery. But Miller had never seen her. Miller had never been here long enough to see the true face of the lighthouse.\n\nHe read on. The final entry was dated three days before Hale\u2019s disappearance.\n\n*Day 315. It is not a lighthouse. It is a trap. The light does not guide ships to safety. It guides them to the rocks. I can see the ships turning, drawn in by the beam. I cannot stop it. The mechanism is locked. I am part of it now. I am the keeper of the lie. If you are reading this, do not trust the light. Do not trust the fog. And for God\u2019s sake, do not look at the water when the beam sweeps past.*\n\nElias closed the book. His hands were shaking. He looked up at the great lens above him, the Fresnel glass rotating with a slow, hypnotic grace. The beam cut through the fog, a solid bar of white light that seemed to push the darkness back. But as he watched, he noticed the rhythm. It wasn\u2019t constant. It pulsed. In, out. In, out. Like a heartbeat. Like a lure.\n\nHe heard the sound of a ship\u2019s horn, distant and mournful, cutting through the wind. He rushed to the window. There, on the rocks below, the figure in the yellow dress was standing. She was not waving. She was pointing. She was pointing directly at the ship, her finger extended, guiding it toward the jagged teeth of the shore.\n\nElias reached for the switch to kill the light. If he cut the power, the ship would lose its reference point. It would drift. It might survive. Or it might crash. But the light was the trap. The light was the lie.\n\nHis hand",
+      "reasoning_chars": 0,
+      "tool_calls": [],
+      "finish_reason": "length",
+      "prompt_tokens": 41,
+      "completion_tokens": 1024,
+      "ttft_seconds": 0.124,
+      "elapsed_seconds": 7.455,
+      "tokens_per_second": 139.7
+    },
+    "thinking": {
+      "ok": true,
+      "content": "\n\nAnswer: 391",
+      "reasoning_chars": 264,
+      "tool_calls": [],
+      "finish_reason": "stop",
+      "prompt_tokens": 73,
+      "completion_tokens": 102,
+      "ttft_seconds": 0.132,
+      "elapsed_seconds": 0.443,
+      "tokens_per_second": 327.5,
+      "answer_correct": true
+    },
+    "long_context": {
+      "ok": true,
+      "content": "7741-ZEBRA",
+      "reasoning_chars": 0,
+      "tool_calls": [],
+      "finish_reason": "stop",
+      "prompt_tokens": 10553,
+      "completion_tokens": 8,
+      "ttft_seconds": 0.993,
+      "elapsed_seconds": 1.054,
+      "tokens_per_second": 131.3,
+      "recall_correct": true
+    },
+    "tool_call": {
+      "ok": true,
+      "content": "",
+      "reasoning_chars": 0,
+      "tool_calls": [
+        {
+          "name": "get_weather",
+          "arguments": "{\"city\": \"Dubai\"}"
+        }
+      ],
+      "finish_reason": "tool_calls",
+      "prompt_tokens": 246,
+      "completion_tokens": 27,
+      "ttft_seconds": 0.16,
+      "elapsed_seconds": 0.195,
+      "tokens_per_second": 758.5,
+      "structured_ok": true,
+      "parsed_arguments": {
+        "city": "Dubai"
+      }
+    },
+    "vision": {
+      "ok": true,
+      "content": "CODE: ZEBRA-7741",
+      "reasoning_chars": 0,
+      "tool_calls": [],
+      "finish_reason": "stop",
+      "prompt_tokens": 147,
+      "completion_tokens": 11,
+      "ttft_seconds": 0.142,
+      "elapsed_seconds": 0.178,
+      "tokens_per_second": 303.5,
+      "ocr_correct": true
+    },
+    "quality": {
+      "factual": {
+        "ok": true,
+        "content": "Canberra became the capital of Australia in 1913.",
+        "reasoning_chars": 0,
+        "tool_calls": [],
+        "finish_reason": "stop",
+        "prompt_tokens": 28,
+        "completion_tokens": 15,
+        "ttft_seconds": 0.116,
+        "elapsed_seconds": 0.166,
+        "tokens_per_second": 302.7
+      },
+      "coding": {
+        "ok": true,
+        "content": "```python\ndef is_palindrome(s: str) -> bool:\n    cleaned = ''.join(ch.lower() for ch in s if ch.isalnum())\n    return cleaned == cleaned[::-1]\n```",
+        "reasoning_chars": 0,
+        "tool_calls": [],
+        "finish_reason": "stop",
+        "prompt_tokens": 38,
+        "completion_tokens": 44,
+        "ttft_seconds": 0.117,
+        "elapsed_seconds": 0.217,
+        "tokens_per_second": 437.1,
+        "has_fence": true
+      },
+      "format": {
+        "ok": true,
+        "content": "{\"city\": \"Tokyo\", \"population_millions\": 14.0}",
+        "reasoning_chars": 0,
+        "tool_calls": [],
+        "finish_reason": "stop",
+        "prompt_tokens": 48,
+        "completion_tokens": 19,
+        "ttft_seconds": 0.12,
+        "elapsed_seconds": 0.201,
+        "tokens_per_second": 232.9,
+        "json_ok": true
+      }
+    },
+    "stability": {
+      "runs": 5,
+      "ok": 5,
+      "errors": [],
+      "tps_mean": 272.3,
+      "tps_stdev": 37.0,
+      "ttft_mean": 0.107,
+      "empty_outputs": 0
+    }
+  },
+  "vram_after_suite_mib": 29150.0,
+  "acceptance": {
+    "sglang_samples": 14,
+    "vllm_samples": 0,
+    "sglang_mean_accept_len": 2.95,
+    "sglang_mean_accept_rate": 0.278,
+    "sglang_mean_gen_tps": 130.4
+  },
+  "finished_at": "20260822T093108Z"
+}

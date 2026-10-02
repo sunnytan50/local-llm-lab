@@ -1,0 +1,102 @@
+{
+  "phase": "dflash_quant",
+  "generated_at": "2026-08-20T14:21:25.500030+00:00",
+  "base_url": "http://127.0.0.1:8013",
+  "model": "qwen38-27b-mtp-4bit",
+  "max_tokens": 128,
+  "rows": [
+    {
+      "output": "# Implementation Note: Local Inference on Apple Silicon\n\n## 1. Architectural Constraints & Memory Topology\n\nApple Silicon (M-series) utilizes a Unified Memory Architecture (UMA). Unlike discrete GPU systems, there is no separate VRAM; the CPU, GPU, and Neural Engine share a single physical memory pool. This topology dictates that memory bandwidth is the primary bottleneck for inference, not compute throughput.\n\n**Key Implications:**\n*   **Zero-Copy Access:** Tensors allocated in unified memory are accessible by all accelerators without explicit `cudaMemcpy` equivalents. However, cache coherency between CPU and GPU requires careful",
+      "output_sha256": "a44cead33875405a3fdb1154dd89e5c19c96ccbe17910a4add7e0ce2583a746d",
+      "finish_reason": "stop",
+      "usage": {
+        "prompt_tokens": 4096,
+        "completion_tokens": 128,
+        "total_tokens": 4224,
+        "input_tokens": 4096,
+        "output_tokens": 128,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "model_load_duration": 2.17,
+        "time_to_first_token": 22.76,
+        "total_time": 30.56,
+        "prompt_eval_duration": 22.76,
+        "generation_duration": 7.8,
+        "prompt_tokens_per_second": 179.95,
+        "generation_tokens_per_second": 16.41
+      },
+      "ttft_seconds": 25.010925583017524,
+      "wall_seconds": 32.82105616701301,
+      "observed_decode_tok_per_s": 16.388970533002034,
+      "peak_server_rss_bytes": 18410356736,
+      "memory_before": {
+        "free_percentage": 72,
+        "swapusage": "total = 19456.00M  used = 18492.00M  free = 964.00M  (encrypted)"
+      },
+      "memory_after": {
+        "free_percentage": 57,
+        "swapusage": "total = 19456.00M  used = 18492.00M  free = 964.00M  (encrypted)"
+      },
+      "dflash_metrics": [
+        {
+          "tokens": 128,
+          "cycles": 54,
+          "tok_per_s": 4.2,
+          "acceptance_percent": 57.8
+        }
+      ],
+      "dflash_stats": null,
+      "target_context_tokens": 4096,
+      "tokenizer_context_tokens": 4096,
+      "parity_with_baseline": true,
+      "speedup_vs_baseline": 1.0149274605292429
+    },
+    {
+      "output": "# Engineering Review: Local Inference on Apple Silicon\n\n## 1. Executive Summary\nThis review synthesizes the operational constraints and architectural realities of running local Large Language Model (LLM) inference on Apple Silicon hardware. The core thesis is that performance optimization (via prefix reuse and speculative decoding) is only valid if it does not violate the **Correctness Invariant** (output parity) or breach the **Memory Safety Gate** (bounded concurrency and deterministic recovery). The unified memory architecture (UMA) of Apple Silicon provides a unique advantage in bandwidth but imposes strict limits on concurrent state management.\n\n## 2. Architectural Context: Unified",
+      "output_sha256": "facbcdf3b71942f14eca1d73be08d3466380619526d89d3aff2ece26ea0f347b",
+      "finish_reason": "stop",
+      "usage": {
+        "prompt_tokens": 16384,
+        "completion_tokens": 128,
+        "total_tokens": 16512,
+        "input_tokens": 16384,
+        "output_tokens": 128,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "time_to_first_token": 165.13,
+        "total_time": 175.98,
+        "prompt_eval_duration": 165.13,
+        "generation_duration": 10.85,
+        "prompt_tokens_per_second": 99.22,
+        "generation_tokens_per_second": 11.8
+      },
+      "ttft_seconds": 165.26884579198668,
+      "wall_seconds": 176.12525620800443,
+      "observed_decode_tok_per_s": 11.790269075600383,
+      "peak_server_rss_bytes": 18160467968,
+      "memory_before": {
+        "free_percentage": 57,
+        "swapusage": "total = 19456.00M  used = 18492.00M  free = 964.00M  (encrypted)"
+      },
+      "memory_after": {
+        "free_percentage": 55,
+        "swapusage": "total = 19456.00M  used = 18492.00M  free = 964.00M  (encrypted)"
+      },
+      "dflash_metrics": [
+        {
+          "tokens": 128,
+          "cycles": 49,
+          "tok_per_s": 0.7,
+          "acceptance_percent": 61.7
+        }
+      ],
+      "dflash_stats": null,
+      "target_context_tokens": 16384,
+      "tokenizer_context_tokens": 16384,
+      "parity_with_baseline": true,
+      "speedup_vs_baseline": 1.261270340131678
+    }
+  ]
+}

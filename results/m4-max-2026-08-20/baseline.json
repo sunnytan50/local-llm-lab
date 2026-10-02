@@ -1,0 +1,117 @@
+{
+  "phase": "baseline",
+  "generated_at": "2026-08-20T13:52:50.238894+00:00",
+  "base_url": "http://127.0.0.1:8013",
+  "model": "qwen38-27b-mtp-4bit",
+  "max_tokens": 128,
+  "rows": [
+    {
+      "output": "# Implementation Note: Local Inference on Apple Silicon\n\n## 1. Architectural Constraints & Memory Topology\n\nApple Silicon (M-series) utilizes a Unified Memory Architecture (UMA). Unlike discrete GPU systems, there is no separate VRAM; the CPU, GPU, and Neural Engine share a single physical memory pool. This topology dictates that memory bandwidth is the primary bottleneck for inference, not compute throughput.\n\n**Key Implications:**\n*   **Zero-Copy Access:** Tensors allocated in unified memory are accessible by all accelerators without explicit `cudaMemcpy` equivalents. However, cache coherency between CPU and GPU requires careful",
+      "output_sha256": "a44cead33875405a3fdb1154dd89e5c19c96ccbe17910a4add7e0ce2583a746d",
+      "finish_reason": "length",
+      "usage": {
+        "prompt_tokens": 4096,
+        "completion_tokens": 128,
+        "total_tokens": 4224,
+        "input_tokens": 4096,
+        "output_tokens": 128,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "time_to_first_token": 24.03,
+        "total_time": 31.95,
+        "prompt_eval_duration": 24.03,
+        "generation_duration": 7.92,
+        "prompt_tokens_per_second": 170.48,
+        "generation_tokens_per_second": 16.15
+      },
+      "ttft_seconds": 24.113822166982573,
+      "wall_seconds": 32.040538166998886,
+      "observed_decode_tok_per_s": 16.14792304905797,
+      "peak_server_rss_bytes": 9845489664,
+      "memory_before": {
+        "free_percentage": 70,
+        "swapusage": "total = 20480.00M  used = 19328.88M  free = 1151.12M  (encrypted)"
+      },
+      "memory_after": {
+        "free_percentage": 56,
+        "swapusage": "total = 20480.00M  used = 19328.88M  free = 1151.12M  (encrypted)"
+      },
+      "dflash_metrics": [],
+      "target_context_tokens": 4096,
+      "tokenizer_context_tokens": 4096
+    },
+    {
+      "output": "# Engineering Review: Local Inference on Apple Silicon\n\n## 1. Executive Summary\nThis review synthesizes the operational constraints and architectural realities of running local Large Language Model (LLM) inference on Apple Silicon hardware. The core thesis is that performance optimization (via prefix reuse and speculative decoding) is only valid if it does not violate the **Correctness Invariant** (output parity) or breach the **Memory Safety Gate** (bounded concurrency and deterministic recovery). The unified memory architecture (UMA) of Apple Silicon provides a unique advantage in bandwidth but imposes strict limits on concurrent state management.\n\n## 2. Architectural Context: Unified",
+      "output_sha256": "facbcdf3b71942f14eca1d73be08d3466380619526d89d3aff2ece26ea0f347b",
+      "finish_reason": "length",
+      "usage": {
+        "prompt_tokens": 16384,
+        "completion_tokens": 128,
+        "total_tokens": 16512,
+        "input_tokens": 16384,
+        "output_tokens": 128,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "time_to_first_token": 144.89,
+        "total_time": 158.58,
+        "prompt_eval_duration": 144.89,
+        "generation_duration": 13.69,
+        "prompt_tokens_per_second": 113.08,
+        "generation_tokens_per_second": 9.35
+      },
+      "ttft_seconds": 145.01078945799964,
+      "wall_seconds": 158.70365791601944,
+      "observed_decode_tok_per_s": 9.347931764073248,
+      "peak_server_rss_bytes": 9916252160,
+      "memory_before": {
+        "free_percentage": 56,
+        "swapusage": "total = 20480.00M  used = 19328.88M  free = 1151.12M  (encrypted)"
+      },
+      "memory_after": {
+        "free_percentage": 54,
+        "swapusage": "total = 20480.00M  used = 19328.88M  free = 1151.12M  (encrypted)"
+      },
+      "dflash_metrics": [],
+      "target_context_tokens": 16384,
+      "tokenizer_context_tokens": 16384
+    },
+    {
+      "output": "# Reliability Analysis: Local Inference on Apple Silicon\n\n## 1. Executive Summary\n\nThe supplied document establishes a foundational framework for executing reliable local inference on Apple Silicon hardware. The core thesis is that the Unified Memory Architecture (UMA) eliminates the traditional bottleneck of data transfer between CPU and GPU, but introduces new challenges regarding memory pressure and concurrency management. To achieve reliability, the system must enforce **bounded concurrency**, monitor **context growth** strictly, implement **deterministic recovery** mechanisms, and maintain a clear architectural separation between model-serving engines.\n\nThis analysis details how to validate fallback strategies when acceleration thresholds are exceeded, ensuring that the",
+      "output_sha256": "d176e53b08384beb612abb56a5c749fe9a1dc67f86329c007118c564ff55cca0",
+      "finish_reason": "length",
+      "usage": {
+        "prompt_tokens": 32768,
+        "completion_tokens": 128,
+        "total_tokens": 32896,
+        "input_tokens": 32768,
+        "output_tokens": 128,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "time_to_first_token": 305.69,
+        "total_time": 314.39,
+        "prompt_eval_duration": 305.69,
+        "generation_duration": 8.7,
+        "prompt_tokens_per_second": 107.19,
+        "generation_tokens_per_second": 14.72
+      },
+      "ttft_seconds": 305.8808993329876,
+      "wall_seconds": 314.5780859999941,
+      "observed_decode_tok_per_s": 14.717402868398718,
+      "peak_server_rss_bytes": 9923706880,
+      "memory_before": {
+        "free_percentage": 54,
+        "swapusage": "total = 20480.00M  used = 19328.88M  free = 1151.12M  (encrypted)"
+      },
+      "memory_after": {
+        "free_percentage": 53,
+        "swapusage": "total = 20480.00M  used = 19328.88M  free = 1151.12M  (encrypted)"
+      },
+      "dflash_metrics": [],
+      "target_context_tokens": 32768,
+      "tokenizer_context_tokens": 32768
+    }
+  ]
+}

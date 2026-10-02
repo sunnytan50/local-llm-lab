@@ -1,0 +1,224 @@
+{
+  "profile": "dspark",
+  "context": 32768,
+  "label": "matched DSpark v2 pinned eba1ac5",
+  "started_at": "20260822T092740Z",
+  "apply": {
+    "status": "done",
+    "phases": [
+      {
+        "at": 0.0,
+        "phase": "queued",
+        "detail": "Waiting for the workstation controller"
+      },
+      {
+        "at": 3.0,
+        "phase": "loading",
+        "detail": "Model server process started; loading weights"
+      },
+      {
+        "at": 133.0,
+        "phase": "verifying",
+        "detail": "Endpoint is up; running the completion probe"
+      },
+      {
+        "at": 135.7,
+        "phase": "ready",
+        "detail": "Ready and completion-verified."
+      }
+    ],
+    "elapsed_seconds": 135.7,
+    "result": {
+      "applied": true,
+      "controller": {
+        "running": true,
+        "pid": 106065,
+        "profile": "dspark",
+        "context": 32768
+      },
+      "model": {
+        "id": "qwen38-nvfp4",
+        "object": "model",
+        "created": 1787390992,
+        "owned_by": "sglang",
+        "root": "qwen38-nvfp4",
+        "parent": null,
+        "max_model_len": 32768
+      },
+      "completion_probe": "READY"
+    },
+    "error": null
+  },
+  "served_model": {
+    "id": "qwen38-nvfp4",
+    "object": "model",
+    "created": 1787390997,
+    "owned_by": "sglang",
+    "root": "qwen38-nvfp4",
+    "parent": null,
+    "max_model_len": 32768
+  },
+  "runtime": {
+    "profile": "dspark",
+    "context": 32768,
+    "running": true,
+    "pid": 106065
+  },
+  "vram_after_load_mib": 26312.0,
+  "suite": {
+    "warmup": {
+      "ok": true,
+      "content": "READY",
+      "reasoning_chars": 0,
+      "tool_calls": [],
+      "finish_reason": "stop",
+      "prompt_tokens": 19,
+      "completion_tokens": 2,
+      "ttft_seconds": 0.165,
+      "elapsed_seconds": 0.184,
+      "tokens_per_second": 104.1
+    },
+    "short": {
+      "ok": true,
+      "content": "Sunlight enters the atmosphere and scatters off gas molecules, a process known as Rayleigh scattering. This scattering effect is much stronger for shorter wavelengths of light, such as blue and violet, than for longer wavelengths like red and orange. As a result, blue light is scattered in all directions across the sky, which is why we perceive the sky as blue when we look up.",
+      "reasoning_chars": 0,
+      "tool_calls": [],
+      "finish_reason": "stop",
+      "prompt_tokens": 23,
+      "completion_tokens": 77,
+      "ttft_seconds": 0.065,
+      "elapsed_seconds": 0.786,
+      "tokens_per_second": 106.9
+    },
+    "generation": {
+      "ok": true,
+      "content": "The rain did not fall so much as it hung in the air, a heavy, gray curtain that blurred the line between the sea and the sky. Elias wiped the condensation from the glass of the lantern room, his breath fogging the cold pane. He had been the keeper of this isolated post for three years, long enough to know that the silence here was not empty, but thick, pressing against his eardrums like deep water. He missed the noise of the village, the clatter of boots on cobblestones, the smell of woodsmoke and roasting meat. Here, there was only the rhythmic groan of the wind and the ceaseless, hungry lap of waves against the rocky foundation.\n\nIt was during the annual deep clean that he found it. The storage room beneath the spiral staircase was a tangle of rusted iron and salt-corroded brass. While moving a stack of heavy, damp crates, a leather-bound volume slid out from beneath a shelf, its spine cracked and faded to the color of old bone. The title was barely legible, scrawled in ink that had bled into the grain of the leather: *Observations of the Light, 1942*.\n\nElias sat on the cold stone floor, the book resting on his knees. The pages were brittle, yellowed at the edges, smelling of mildew and something sharper, like ozone. He opened it carefully, fearing the binding might snap. The handwriting inside was jagged, hurried, the letters slanting back as if the writer was running out of time or strength.\n\nThe first entry was dated November 14th. The ink was dark, almost black. *The fog is so thick I cannot see the cliff face. I feel the stone breathing. The light does not reach far enough today. I am afraid of the dark that sits just beyond the beam.*\n\nElias turned the page. The entries grew more frantic as the weeks passed. The keeper, a man named Arthur, described not just the weather, but a growing sense of paranoia. He wrote of shadows that moved independently of the wind, of a knocking on the door that sounded like fingers tapping on wet wood. *They say the light keeps them out,* Arthur had written in December. *But what if the light is what draws them in? What if the darkness is not empty, but full?*\n\nElias\u2019s heart began to pound against his ribs. He remembered the nights when the fog was so dense he couldn\u2019t see his own hand. He remembered the strange, rhythmic thumping against the outer door during the storm last month, a sound he had dismissed as the sea. He had locked the door, but he had heard the tapping continue, slow and deliberate, for hours.\n\nHe turned to the final entry, dated the last day of Arthur\u2019s tenure. The handwriting was no longer jagged but smeared, as if the pen had slipped on a wet hand. *The light is broken. Not the bulb, not the mechanism. The light itself is broken. It is no longer a guide. It is a trap. I am going to the shore. I will not wait for the rescue. I will go into the water to find out what is waiting for me. If you are reading this, do not keep the light on. Let the darkness take it. Let it be quiet.*\n\nElias closed the book. The silence in the storage room seemed to deepen, a vacuum that sucked the air from his lungs. He looked at the heavy iron key in his pocket, the one that controlled the main power switch for the lighthouse. For three years, he had wound the clockwork, polished the lens, and ensured the beam swept the horizon every four seconds. It was his duty. It was his life.\n\nBut now, the rhythm of the light felt less like a heartbeat and more like a pulse of something alive and hungry. He walked back up the spiral stairs, the metal rungs cold under his boots. The rain had stopped, leaving the world washed and stark. The beam cut through the mist, a solid white spear pointing out into the void.\n\nElias stood in the lantern room, looking out at the churning sea. He could see the shipwrecked boats drifting in the distance, their lights flickering. He raised his hand to the switch. The metal was warm to the touch. He thought of Arthur\u2019s final words. *Let it be quiet.*\n\nHe hesitated. The wind howled, a low, mournful sound that sounded almost like a voice. He looked at the lens, the intricate glass that focused the sun\u2019s reflection into a powerful beam. It was beautiful, in its own sterile way. But it was also a lie. It promised safety where there was only isolation.\n\nWith a trembling hand, Elias reached for the switch. He did not turn it off. Not yet. Instead, he pulled out a small notebook from his pocket and a pen.",
+      "reasoning_chars": 0,
+      "tool_calls": [],
+      "finish_reason": "length",
+      "prompt_tokens": 41,
+      "completion_tokens": 1024,
+      "ttft_seconds": 0.066,
+      "elapsed_seconds": 9.363,
+      "tokens_per_second": 110.2
+    },
+    "thinking": {
+      "ok": true,
+      "content": "\n\nAnswer: 391",
+      "reasoning_chars": 103,
+      "tool_calls": [],
+      "finish_reason": "stop",
+      "prompt_tokens": 73,
+      "completion_tokens": 40,
+      "ttft_seconds": 0.071,
+      "elapsed_seconds": 0.231,
+      "tokens_per_second": 250.4,
+      "answer_correct": true
+    },
+    "long_context": {
+      "ok": true,
+      "content": "7741-ZEBRA",
+      "reasoning_chars": 0,
+      "tool_calls": [],
+      "finish_reason": "stop",
+      "prompt_tokens": 10553,
+      "completion_tokens": 8,
+      "ttft_seconds": 0.925,
+      "elapsed_seconds": 0.97,
+      "tokens_per_second": 175.8,
+      "recall_correct": true
+    },
+    "tool_call": {
+      "ok": true,
+      "content": "",
+      "reasoning_chars": 0,
+      "tool_calls": [
+        {
+          "name": "get_weather",
+          "arguments": "{\"city\": \"Dubai\"}"
+        }
+      ],
+      "finish_reason": "tool_calls",
+      "prompt_tokens": 246,
+      "completion_tokens": 27,
+      "ttft_seconds": 0.082,
+      "elapsed_seconds": 0.141,
+      "tokens_per_second": 452.0,
+      "structured_ok": true,
+      "parsed_arguments": {
+        "city": "Dubai"
+      }
+    },
+    "vision": {
+      "ok": true,
+      "content": "CODE: ZEBRA-7741",
+      "reasoning_chars": 0,
+      "tool_calls": [],
+      "finish_reason": "stop",
+      "prompt_tokens": 147,
+      "completion_tokens": 11,
+      "ttft_seconds": 0.079,
+      "elapsed_seconds": 0.175,
+      "tokens_per_second": 114.7,
+      "ocr_correct": true
+    },
+    "quality": {
+      "factual": {
+        "ok": true,
+        "content": "The capital of Australia is Canberra, which officially became the capital in 1913.",
+        "reasoning_chars": 0,
+        "tool_calls": [],
+        "finish_reason": "stop",
+        "prompt_tokens": 28,
+        "completion_tokens": 20,
+        "ttft_seconds": 0.06,
+        "elapsed_seconds": 0.201,
+        "tokens_per_second": 141.8
+      },
+      "coding": {
+        "ok": true,
+        "content": "```python\ndef is_palindrome(s):\n    cleaned = [c.lower() for c in s if c.isalnum()]\n    return cleaned == cleaned[::-1]\n```",
+        "reasoning_chars": 0,
+        "tool_calls": [],
+        "finish_reason": "stop",
+        "prompt_tokens": 38,
+        "completion_tokens": 38,
+        "ttft_seconds": 0.062,
+        "elapsed_seconds": 0.174,
+        "tokens_per_second": 337.4,
+        "has_fence": true
+      },
+      "format": {
+        "ok": true,
+        "content": "{\"city\":\"Tokyo\",\"population_millions\":37.2}",
+        "reasoning_chars": 0,
+        "tool_calls": [],
+        "finish_reason": "stop",
+        "prompt_tokens": 48,
+        "completion_tokens": 16,
+        "ttft_seconds": 0.056,
+        "elapsed_seconds": 0.165,
+        "tokens_per_second": 146.7,
+        "json_ok": true
+      }
+    },
+    "stability": {
+      "runs": 5,
+      "ok": 5,
+      "errors": [],
+      "tps_mean": 165.1,
+      "tps_stdev": 20.2,
+      "ttft_mean": 0.057,
+      "empty_outputs": 0
+    }
+  },
+  "vram_after_suite_mib": 26494.0,
+  "acceptance": {
+    "sglang_samples": 19,
+    "vllm_samples": 0,
+    "sglang_mean_accept_len": 2.05,
+    "sglang_mean_accept_rate": 0.151,
+    "sglang_mean_gen_tps": 108.3
+  },
+  "finished_at": "20260822T093012Z"
+}

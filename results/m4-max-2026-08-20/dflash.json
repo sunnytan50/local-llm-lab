@@ -1,0 +1,215 @@
+{
+  "phase": "dflash",
+  "generated_at": "2026-08-20T14:03:51.721765+00:00",
+  "base_url": "http://127.0.0.1:8013",
+  "model": "qwen38-27b-mtp-4bit",
+  "max_tokens": 128,
+  "rows": [
+    {
+      "output": "# Implementation Note: Local Inference on Apple Silicon\n\n## 1. Architectural Constraints & Memory Topology\n\nApple Silicon (M-series) utilizes a Unified Memory Architecture (UMA). Unlike discrete GPU systems, there is no separate VRAM; the CPU, GPU, and Neural Engine share a single physical memory pool. This topology dictates that memory bandwidth is the primary bottleneck for inference, not compute throughput.\n\n**Key Implications:**\n*   **Zero-Copy Access:** Tensors allocated in unified memory are accessible by all accelerators without explicit `cudaMemcpy` equivalents. However, cache coherency between CPU and GPU requires careful",
+      "output_sha256": "a44cead33875405a3fdb1154dd89e5c19c96ccbe17910a4add7e0ce2583a746d",
+      "finish_reason": "stop",
+      "usage": {
+        "prompt_tokens": 4096,
+        "completion_tokens": 128,
+        "total_tokens": 4224,
+        "input_tokens": 4096,
+        "output_tokens": 128,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "time_to_first_token": 22.02,
+        "total_time": 30.59,
+        "prompt_eval_duration": 22.02,
+        "generation_duration": 8.57,
+        "prompt_tokens_per_second": 186.01,
+        "generation_tokens_per_second": 14.94
+      },
+      "ttft_seconds": 22.098530791990925,
+      "wall_seconds": 30.671693833981408,
+      "observed_decode_tok_per_s": 14.930312111535612,
+      "peak_server_rss_bytes": 22107979776,
+      "memory_before": {
+        "free_percentage": 71,
+        "swapusage": "total = 20480.00M  used = 19328.88M  free = 1151.12M  (encrypted)"
+      },
+      "memory_after": {
+        "free_percentage": 54,
+        "swapusage": "total = 20480.00M  used = 19328.88M  free = 1151.12M  (encrypted)"
+      },
+      "dflash_metrics": [
+        {
+          "tokens": 128,
+          "cycles": 54,
+          "tok_per_s": 4.2,
+          "acceptance_percent": 57.8
+        }
+      ],
+      "dflash_stats": {
+        "speculation": {
+          "last": {
+            "generation_tokens": 128,
+            "cycles": 54,
+            "acceptance_ratio": 0.578125,
+            "accepted_draft_tokens": 74,
+            "tokens_per_cycle": 2.3703703703703702,
+            "accepted_draft_tokens_per_cycle": 1.3703703703703705,
+            "fallback_ar": false,
+            "fallback_reason": null
+          },
+          "totals": {
+            "requests": 2,
+            "speculative_requests": 2,
+            "fallback_requests": 0,
+            "generation_tokens": 134,
+            "accepted_draft_tokens": 78,
+            "cycles": 56,
+            "acceptance_ratio": 0.582089552238806,
+            "tokens_per_cycle": 2.392857142857143,
+            "accepted_draft_tokens_per_cycle": 1.3928571428571428
+          }
+        },
+        "pairing_warning": null
+      },
+      "target_context_tokens": 4096,
+      "tokenizer_context_tokens": 4096,
+      "parity_with_baseline": true,
+      "speedup_vs_baseline": 0.9245964367167708
+    },
+    {
+      "output": "# Engineering Review: Local Inference on Apple Silicon\n\n## 1. Executive Summary\nThis review synthesizes the operational constraints and architectural realities of running local Large Language Model (LLM) inference on Apple Silicon hardware. The core thesis is that performance optimization (via prefix reuse and speculative decoding) is only valid if it does not violate the **Correctness Invariant** (output parity) or breach the **Memory Safety Gate** (bounded concurrency and deterministic recovery). The unified memory architecture (UMA) of Apple Silicon provides a unique advantage in bandwidth but imposes strict limits on concurrent state management.\n\n## 2. Architectural Context: Unified",
+      "output_sha256": "facbcdf3b71942f14eca1d73be08d3466380619526d89d3aff2ece26ea0f347b",
+      "finish_reason": "stop",
+      "usage": {
+        "prompt_tokens": 16384,
+        "completion_tokens": 128,
+        "total_tokens": 16512,
+        "input_tokens": 16384,
+        "output_tokens": 128,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "time_to_first_token": 128.55,
+        "total_time": 141.09,
+        "prompt_eval_duration": 128.55,
+        "generation_duration": 12.54,
+        "prompt_tokens_per_second": 127.46,
+        "generation_tokens_per_second": 10.2
+      },
+      "ttft_seconds": 128.66208587499568,
+      "wall_seconds": 141.20940033299848,
+      "observed_decode_tok_per_s": 10.201386155454191,
+      "peak_server_rss_bytes": 22113091584,
+      "memory_before": {
+        "free_percentage": 54,
+        "swapusage": "total = 20480.00M  used = 19328.88M  free = 1151.12M  (encrypted)"
+      },
+      "memory_after": {
+        "free_percentage": 54,
+        "swapusage": "total = 20480.00M  used = 19328.88M  free = 1151.12M  (encrypted)"
+      },
+      "dflash_metrics": [
+        {
+          "tokens": 128,
+          "cycles": 48,
+          "tok_per_s": 0.9,
+          "acceptance_percent": 62.5
+        }
+      ],
+      "dflash_stats": {
+        "speculation": {
+          "last": {
+            "generation_tokens": 128,
+            "cycles": 48,
+            "acceptance_ratio": 0.625,
+            "accepted_draft_tokens": 80,
+            "tokens_per_cycle": 2.6666666666666665,
+            "accepted_draft_tokens_per_cycle": 1.6666666666666667,
+            "fallback_ar": false,
+            "fallback_reason": null
+          },
+          "totals": {
+            "requests": 3,
+            "speculative_requests": 3,
+            "fallback_requests": 0,
+            "generation_tokens": 262,
+            "accepted_draft_tokens": 158,
+            "cycles": 104,
+            "acceptance_ratio": 0.6030534351145038,
+            "tokens_per_cycle": 2.519230769230769,
+            "accepted_draft_tokens_per_cycle": 1.5192307692307692
+          }
+        },
+        "pairing_warning": null
+      },
+      "target_context_tokens": 16384,
+      "tokenizer_context_tokens": 16384,
+      "parity_with_baseline": true,
+      "speedup_vs_baseline": 1.0912987399695204
+    },
+    {
+      "output": "# Reliability Analysis: Local Inference on Apple Silicon\n\n## 1. Executive Summary\n\nThe supplied document establishes a foundational framework for executing reliable local inference on Apple Silicon hardware. The core thesis is that the Unified Memory Architecture (UMA) eliminates the traditional bottleneck of data transfer between CPU and GPU, but introduces new challenges regarding memory pressure and concurrency management. To achieve reliability, the system must enforce **bounded concurrency**, monitor **context growth** strictly, implement **deterministic recovery** mechanisms, and maintain a clear architectural separation between model-serving engines.\n\nThis analysis details how to validate fallback strategies when acceleration thresholds are exceeded, ensuring that the",
+      "output_sha256": "d176e53b08384beb612abb56a5c749fe9a1dc67f86329c007118c564ff55cca0",
+      "finish_reason": "length",
+      "usage": {
+        "prompt_tokens": 32768,
+        "completion_tokens": 128,
+        "total_tokens": 32896,
+        "input_tokens": 32768,
+        "output_tokens": 128,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "time_to_first_token": 282.04,
+        "total_time": 290.28,
+        "prompt_eval_duration": 282.04,
+        "generation_duration": 8.23,
+        "prompt_tokens_per_second": 116.18,
+        "generation_tokens_per_second": 15.55
+      },
+      "ttft_seconds": 282.1779582500167,
+      "wall_seconds": 290.41210920902085,
+      "observed_decode_tok_per_s": 15.545014979356171,
+      "peak_server_rss_bytes": 22111387648,
+      "memory_before": {
+        "free_percentage": 53,
+        "swapusage": "total = 20480.00M  used = 19328.88M  free = 1151.12M  (encrypted)"
+      },
+      "memory_after": {
+        "free_percentage": 52,
+        "swapusage": "total = 20480.00M  used = 19320.88M  free = 1159.12M  (encrypted)"
+      },
+      "dflash_metrics": [],
+      "dflash_stats": {
+        "speculation": {
+          "last": {
+            "generation_tokens": 128,
+            "cycles": 48,
+            "acceptance_ratio": 0.625,
+            "accepted_draft_tokens": 80,
+            "tokens_per_cycle": 2.6666666666666665,
+            "accepted_draft_tokens_per_cycle": 1.6666666666666667,
+            "fallback_ar": false,
+            "fallback_reason": null
+          },
+          "totals": {
+            "requests": 3,
+            "speculative_requests": 3,
+            "fallback_requests": 0,
+            "generation_tokens": 262,
+            "accepted_draft_tokens": 158,
+            "cycles": 104,
+            "acceptance_ratio": 0.6030534351145038,
+            "tokens_per_cycle": 2.519230769230769,
+            "accepted_draft_tokens_per_cycle": 1.5192307692307692
+          }
+        },
+        "pairing_warning": null
+      },
+      "target_context_tokens": 32768,
+      "tokenizer_context_tokens": 32768,
+      "parity_with_baseline": true,
+      "speedup_vs_baseline": 1.0562335704443144
+    }
+  ]
+}
